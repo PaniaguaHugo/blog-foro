@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos web</title>
+    <!-- Icono de la página -->
+    <link rel="icon" href="assets/icon/f_pescar.svg">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Acerca</a></li>
+            <li><a class="active" href="#">Foro</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera principal -->
+    <header id="header">
+        <h1>Fundamentos Web</h1>
+        <p>html | css</p>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+        <article>
+            <h2>Formularios HTML</h2>
+        </article>
+        <!--&lt; Es una manera de usar '<' -->
+        <p>
+            Son herramientas que permiten la interacción entre cliente y servidor (intercambio
+            de datos) mediante una consulta. Para implementarlos debemos utilizar la etiqueta
+            <strong>&lt;form></strong> y colocar en su interior los elementos correspondientes
+            al mismo, cabe destacar que solo se enviará lo que se ecuentre dentro del formulario
+            y no se realizara ninguna consulta hasta confirmar el envío.
+        </p>
+        <section>
+            <header>
+                <h3>¿Como funcionan?</h3>
+            </header>
+            <p>
+                <em>A la etiqueta mencionada anterormente</em>
+                debemos especificarles al menos dos atributos, entre ellos <strong>action="..."
+                </strong> que indica lo que debe suceder al momento de realizar el envio,
+                generalmente se utiliza un script en lenguaje de servidor <br><em>EJ: PHP</em>;
+                y <strong>method="..."</strong> que corresponde a un valor preexistente que
+                indica como se realizara el envio y quien tiene la prioridad en la comunicación.
+            </p>
+        </section>
+        <section>
+            <header>
+                <h3>¿Como se compone?</h3>
+            </header>
+            <p>
+                <strong>Rotulos (LABEL)</strong>
+                <strong>Campos (INPUT / TEXTAREA / SELECT)</strong>
+            </p>
+        </section>
+    </main>
+    <!-- Pie de pagina -->
+    <footer id="footer">
+        <!-- Formulario de contacto -->
+        <form id="contact" action="scripts/contact.php" method="POST">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su nombre</label>
+            <input id="contact_name" name="name" type="text" maxlength="50" minlength="2" required>
+            <label for="contact_email">Ingrese su correo</label>
+            <input id="contact_email" name="email" minlength="8" type="email" placeholder="paniaguahugo@hotm..."
+            required>
+            <label for="contact_consult">Ingrese su consulta</label>
+            <textarea id="contact_consult" name="consult" required placeholder="Deja tu mensaje aquí..." 
+            minlength="20" maxlength="200"
+            ></textarea>
+            <button>ENVIAR</button>
+            <div>
+                <input id="yes" name="contract" type="checkbox" checked value="accept" required>
+                <label for="yes">Acepto los términos</label>
+            </div>
+            <div>
+                Hoy ¿aprendiste algo nuevo?
+                <label for="si"></label>
+                <input id="si" type="radio" name="aprendiste" value="yes">
+
+                <label for="no"></label>
+                <input id="no" type="radio" name="aprendiste" value="no">
+                
+                <label for="tal_vez"></label>
+                <input id="tal_vez" type="radio" name="aprendiste" value="maybe">
+            </div>
+        </form>
+        <!-- &copy; -->
+        <p>
+            &copy; Todos los derechos reservados
+        </p>
+    </footer>
+</body>
+</html>
